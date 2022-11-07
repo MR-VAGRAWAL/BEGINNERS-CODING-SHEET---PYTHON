@@ -7,6 +7,10 @@ b = int(input("Enter The Cofficient Of x :\n"))
 c = int(input("Enter The Constant Value :\n"))
 eqn = f"{a}x**2 + {b}x + {c}"
 print(eqn)
-root1 = (-b+((b**2)-4*a*c)**0.5)/2*a
-root2 = (-b-((b**2)-4*a*c)**0.5)/2*a
-print(f"The Roots Of The {eqn} is {root1} and {root2}")
+d = ((b**2)-4*a*c)
+if d >= 0:
+    root1 = (-b+((b**2)-4*a*c)**0.5)/2*a
+    root2 = (-b-((b**2)-4*a*c)**0.5)/2*a
+    print(f"The Roots Of The {eqn} is {root1} and {root2}")
+else:
+    print("The Equation Will Hve Imaginary Roots")
